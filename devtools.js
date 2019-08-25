@@ -1,19 +1,23 @@
 function erudaFix(root) {
   //Console textarea fix
-  var conversionMap = {}
-  conversionMap[0x2018] = '\'';
-  conversionMap[0x201B] = '\'';
-  conversionMap[0x201C] = '"';
-  conversionMap[0x201F] = '"';
-  conversionMap[0x2019] = '\'';
-  conversionMap[0x201D] = '\"';
-  conversionMap[0x2032] = '\'';
-  conversionMap[0x2033] = '"';
-  conversionMap[0x2035] = '\'';
-  conversionMap[0x2036] = '"';
-  conversionMap[0x2014] = '-';
-  conversionMap[0x2013] = '-';
-  function preventPretentiousPunctuation(event){
+  var conversionMap = createConversionMap;
+  function createConversionMap() {
+    var map = {};
+    map[0x2018] = '\'';
+    map[0x201B] = '\'';
+    map[0x201C] = '"';
+    map[0x201F] = '"';
+    map[0x2019] = '\'';
+    map[0x201D] = '\"';
+    map[0x2032] = '\'';
+    map[0x2033] = '"';
+    map[0x2035] = '\'';
+    map[0x2036] = '"';
+    map[0x2014] = '-';
+    map[0x2013] = '-';
+    return map;
+  }
+  function preventPretentiousPunctuation(event) {
     if(event.key.length != 1) return;
     var code = event.key.codePointAt(0);
     var replacement = conversionMap[code];
@@ -27,5 +31,4 @@ function erudaFix(root) {
   textarea.autocapitalize = "off";
   textarea.spellcheck = "off";
   textarea.addEventListener('keypress', preventPretentiousPunctuation, false);
-
 }
