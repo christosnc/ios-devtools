@@ -1,34 +1,17 @@
 function erudaFix(root) {
   //Console textarea fix
-  var conversionMap = createConversionMap;
-  function createConversionMap() {
-    var map = {};
-    map[0x2018] = '\'';
-    map[0x201B] = '\'';
-    map[0x201C] = '"';
-    map[0x201F] = '"';
-    map[0x2019] = '\'';
-    map[0x201D] = '\"';
-    map[0x2032] = '\'';
-    map[0x2033] = '"';
-    map[0x2035] = '\'';
-    map[0x2036] = '"';
-    map[0x2014] = '-';
-    map[0x2013] = '-';
-    return map;
-  }
   function preventPretentiousPunctuation(event) {
-    if(event.key.length != 1) return;
-    var code = event.key.codePointAt(0);
-    var replacement = conversionMap[code];
-    if(replacement) {
-      event.preventDefault();
-      document.execCommand('insertText', 0, replacement);
+    try {
+      let initial = textarea.value;
+      let replaced = "";
+      replaced = initial.replace(/[\u2018\u201B\u201C\u201F\u2019\u201D\u2032\u2033\u2035\u2036\u2014\u2013]/g, (char) => '\'\'""\'"\'"\'"--'.substr('\u2018\u201B\u201C\u201F\u2019\u201D\u2032\u2033\u2035\u2036\u2014\u2013'.indexOf(char), 1));
+      if(initial !== replaced) textarea.value = replaced;
     }
+    catch(err) {}
   }
   var textarea = root.querySelector(".eruda-dev-tools .eruda-tools .eruda-console .eruda-js-input textarea");
   textarea.autocorrect = "off";
   textarea.autocapitalize = "off";
   textarea.spellcheck = "off";
-  textarea.addEventListener('keypress', preventPretentiousPunctuation);
+  textarea.addEventListener('keypress', preventPretentiousPunctuation, false);
 }
