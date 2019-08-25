@@ -76,7 +76,7 @@
   border-right: 4.8px solid transparent;
 }
 
-.eruda-breadcrumb, .eruda-children, .eruda-attributes, .eruda-styles h2, .eruda-computed-style h2{
+.eruda-elements .eruda-breadcrumb, .eruda-elements .eruda-children, .eruda-elements .eruda-attributes, .eruda-elements .eruda-styles h2, .eruda-elements .eruda-computed-style h2{
   display: none;
 }
 
@@ -93,7 +93,7 @@
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 4px 0 rgba(0, 0, 0, 0.08), 0 3px 1px -2px rgba(0, 0, 0, 0.2) !important;
   padding: 10px !important;
   margin: 0 !important;
-  margin-top: 10px !important;
+  /* margin-top: 10px !important; */
 }
 
 .eruda-dev-tools .eruda-tools .eruda-elements .eruda-computed-style .eruda-table-wrapper{
