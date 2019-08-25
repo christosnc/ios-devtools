@@ -30,5 +30,5 @@ function erudaFix(root) {
   textarea.autocorrect = "off";
   textarea.autocapitalize = "off";
   textarea.spellcheck = "off";
-  textarea.addEventListener('keypress', preventPretentiousPunctuation, false);
+  textarea.addEventListener('keypress', preventPretentiousPunctuation);
 }
