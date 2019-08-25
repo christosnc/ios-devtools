@@ -67,9 +67,10 @@
   border-bottom: 4.8px solid transparent !important;
 }
 
-.eruda-dev-tools .eruda-tools .eruda-dom .eruda-dom-tree .eruda-tree-item.eruda-expanded:before{
+.eruda-dev-tools .eruda-tools .eruda-dom .eruda-dom-tree .eruda-tree-item.eruda-expandable.eruda-expanded:before{
   border: none !important;
   left: -13px !important;
+  top: 5px !important;
   border-top: 6px solid #727272;
   border-left: 4.8px solid transparent;
   border-right: 4.8px solid transparent;
