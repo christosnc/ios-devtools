@@ -1,0 +1,48 @@
+.eruda-nav-bar{
+  height: 40px !important;
+}
+
+.eruda-nav-bar-item{
+  height: 40px !important;
+  line-height: 40px !important;
+}
+
+.eruda-dev-tools .eruda-tools .eruda-console .eruda-logs .eruda-log-item.eruda-warn{
+  border-top: 1px solid #fff5c2;
+  border-bottom: 1px solid #fff5c2;
+  background-color: #fffbe6;
+}
+
+.eruda-warn .eruda-log-content{
+  color: #5c3c00 !important;
+}
+
+.eruda-dev-tools .eruda-tools .eruda-console .eruda-logs .eruda-log-item.eruda-error{
+  color: red;
+  border-top: 1px solid #ffd6d6;
+  border-bottom: 1px solid #ffd6d6;
+  background-color: #fff0f0;
+}
+
+.eruda-error .eruda-log-content{
+  color: red !important;
+}
+
+.eruda-log-item{
+  padding: 8px 4px !important;
+}
+
+.eruda-icon-container{
+  padding-left: 5px !important;
+}
+
+.eruda-log-content-wrapper{
+  padding-left: 4px !important;
+}
+
+.eruda-log-content{
+  font-size: 14px!important;
+  font-family: Menlo,Consolas,monospace;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4em;
+}
