@@ -1,3 +1,7 @@
+.eruda-dev-tools{
+  padding-top: 40px !important;
+}
+
 .eruda-nav-bar{
   height: 40px !important;
 }
@@ -41,8 +45,32 @@
 }
 
 .eruda-log-content, .eruda-dev-tools .eruda-tools .eruda-console .eruda-js-input textarea{
-  font-size: 14px!important;
+  font-size: 14px !important;
   font-family: Menlo,Consolas,monospace !important;
   -webkit-font-smoothing: antialiased !important;
   line-height: 1.4em !important;
+}
+
+.eruda-dev-tools .eruda-tools .eruda-dom .eruda-dom-tree{
+  font-size: 13px !important;
+  font-family: Menlo,Consolas,monospace !important;
+  -webkit-font-smoothing: antialiased !important;
+  line-height: 1.4em !important;
+}
+
+.eruda-dev-tools .eruda-tools .eruda-dom .eruda-dom-tree .eruda-tree-item.eruda-expandable:before{
+  border: none !important;
+  left: -11px !important;
+  top: 3px !important;
+  border-left: 6px solid #727272 !important;
+  border-top: 4.8px solid transparent !important;
+  border-bottom: 4.8px solid transparent !important;
+}
+
+.eruda-dev-tools .eruda-tools .eruda-dom .eruda-dom-tree .eruda-tree-item.eruda-expanded:before{
+  border: none !important;
+  left: -13px !important;
+  border-top: 6px solid #727272;
+  border-left: 4.8px solid transparent;
+  border-right: 4.8px solid transparent;
 }

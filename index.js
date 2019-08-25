@@ -9,3 +9,4 @@ script.onload = function(){
   document.body.appendChild(loaded);
 }
 document.body.appendChild(script);
+<script src="https://cdn.jsdelivr.net/npm/eruda-dom"></script>
