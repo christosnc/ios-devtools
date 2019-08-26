@@ -76,7 +76,7 @@
   border-right: 4.8px solid transparent;
 }
 
-.eruda-elements .eruda-breadcrumb, .eruda-elements .eruda-children, .eruda-elements .eruda-attributes, .eruda-elements .eruda-styles h2, .eruda-elements .eruda-computed-style h2{
+.eruda-elements .eruda-breadcrumb, .eruda-elements .eruda-parents, .eruda-elements .eruda-children, .eruda-elements .eruda-attributes, .eruda-elements .eruda-styles h2, .eruda-elements .eruda-computed-style h2{
   display: none;
 }
 
